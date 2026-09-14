@@ -1,0 +1,50 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.entete {
+    text-align: center;
+    background-color: #ff4757;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.badge {
+    background-color: #2ed573;
+    display:inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.infos {
+    background: white;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+
+}
+
+.grille {
+    display: flex;
+    gap: 15px;
+}
+
+.carte {
+    background: white;
+    padding:15px;
+    border-radius: 8px;
+    flex:1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.prix {
+    color: #ff4757;
+    font-size: 1.2em;
+}
