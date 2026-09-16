@@ -80,4 +80,24 @@ main {
 .prix {
     color: #e63946;
     font-size: 18px;
+} 
+.recherche-box {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.recherche-box input {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+}
+
+#total-produits {
+    font-weight: bold;
+    color: #e63946;
+    margin: 0;
 }
