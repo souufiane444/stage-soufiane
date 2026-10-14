@@ -1,4 +1,3 @@
-
 const API = "https://appdev.eatandcollect.fr/api/v3";
 const DOMAINE = "dev.eatandcollect.fr";
 
@@ -8,6 +7,7 @@ function formaterPrix(prix) {
   if (prix === null || prix === undefined) return "";
   return Number(prix).toFixed(2).replace(".", ",") + " €";
 }
+
 async function chargerRestaurant() {
   const reponse = await fetch(API + "/restaurant/" + DOMAINE);
   const restaurant = await reponse.json();
@@ -30,9 +30,7 @@ async function chargerMenu() {
   const reponse = await fetch(API + "/products/" + DOMAINE);
   tousLesFamilles = await reponse.json();
 
-
   afficherMenu(tousLesFamilles);
-
 
   const inputRecherche = document.getElementById("recherche");
   if (inputRecherche) {
@@ -41,6 +39,7 @@ async function chargerMenu() {
     });
   }
 }
+
 function afficherMenu(familles) {
   let html = "";
   let nombreTotal = 0;
@@ -53,7 +52,9 @@ function afficherMenu(familles) {
     html += `<h2 class="titre-famille">${famille.name}</h2><div class="grille">`;
 
     for (const produit of produits) {
-      let image = produit.image ? `<img src="${produit.image}" alt="${produit.name}">` : "";
+      let image = produit.image
+        ? `<img src="${produit.image}" alt="${produit.name}">`
+        : "";
       html += `
         <div class="carte">
           ${image}
@@ -70,7 +71,8 @@ function afficherMenu(familles) {
     elTotal.textContent = "Nombre de produits : " + nombreTotal;
   }
 
-  document.getElementById("menu").innerHTML = html || "<p>Aucun produit trouvé.</p>";
+  document.getElementById("menu").innerHTML =
+    html || "<p>Aucun produit trouvé.</p>";
 }
 
 function filtrerEtAfficher(texte) {
@@ -81,10 +83,11 @@ function filtrerEtAfficher(texte) {
 
   const famillesFiltrees = tousLesFamilles.map((famille) => ({
     ...famille,
-    menu_list: (famille.menu_list || []).filter((produit) =>
-      produit.name.toLowerCase().includes(texte) ||
-      (produit.description || "").toLowerCase().includes(texte)
-    )
+    menu_list: (famille.menu_list || []).filter(
+      (produit) =>
+        produit.name.toLowerCase().includes(texte) ||
+        (produit.description || "").toLowerCase().includes(texte),
+    ),
   }));
 
   afficherMenu(famillesFiltrees);

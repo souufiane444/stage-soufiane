@@ -1,103 +1,99 @@
 
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    color: #222222;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222222;
 }
 
 .entete {
-    background: #e63946;
-    color: white;
-    padding: 24px;
-    text-align: center;
+  background: #e63946;
+  color: white;
+  padding: 24px;
+  text-align: center;
 }
 
 .badge {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    background: white;
-    color: #e63946;
-    font-weight: bold;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: white;
+  color: #e63946;
+  font-weight: bold;
 }
 
 main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 16px;
-
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
 }
 
 .infos {
-    background: white;
-    padding: 16px;
-    border-radius: 12px;
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
 }
 
-.titre-famille{
-    margin-top: 32px;
+.titre-famille {
+  margin-top: 32px;
 }
 
 .grille {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
 }
 
 .carte {
-    background: white;
-    border-radius: 12px;
-    padding: 12px;
-    box-shadow: 0 2px rgba(0,0,0 0.1);
-
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carte img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 8px;
-
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .carte h3 {
-    font-size: 16px;
-    margin: 8px 0 4px;
-
+  font-size: 16px;
+  margin: 8px 0 4px;
 }
 
 .carte p {
-    font-size: 13px;
-    color: #666666;
+  font-size: 13px;
+  color: #666666;
 }
 
 .prix {
-    color: #e63946;
-    font-size: 18px;
-} 
+  color: #e63946;
+  font-size: 18px;
+}
+
 .recherche-box {
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .recherche-box input {
-    padding: 10px 14px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
-    width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 100%;
 }
 
 #total-produits {
-    font-weight: bold;
-    color: #e63946;
-    margin: 0;
+  font-weight: bold;
+  color: #e63946;
+  margin: 0;
 }
